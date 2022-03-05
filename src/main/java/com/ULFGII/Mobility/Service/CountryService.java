@@ -3,10 +3,12 @@ package com.ULFGII.Mobility.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ULFGII.Mobility.DAO.ContryRepo;
 import com.ULFGII.Mobility.Entity.Country;
 
+@Service
 public class CountryService {
 
 	@Autowired
