@@ -35,7 +35,7 @@ public class UniversityController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/universitys", method = RequestMethod.GET)
+	@RequestMapping(value = "/universities", method = RequestMethod.GET)
 	public ResponseEntity<?> getuniversity() {
 		return new ResponseEntity<>(universityService.getAll(), HttpStatus.OK);
 
