@@ -19,32 +19,31 @@ import com.ULFGII.Mobility.Service.CountryService;
 public class CountryController {
 	@Autowired
 	private CountryService countryService;
-	
 
 	@RequestMapping(value = "/country", method = RequestMethod.POST)
 	public ResponseEntity<?> postcountry(@RequestBody Country country) {
- 
+
 		countryService.save(country);
-			return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/country", method = RequestMethod.PUT)
 	public ResponseEntity<?> putcountry(@RequestBody Country country) {
- 
+
 		countryService.save(country);
-			return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/countrys", method = RequestMethod.GET)
-	public  ResponseEntity<?> getcountry() {
-		return new ResponseEntity<>(countryService.getAll(),HttpStatus.OK);
+	@RequestMapping(value = "/countries", method = RequestMethod.GET)
+	public ResponseEntity<?> getcountry() {
+		return new ResponseEntity<>(countryService.getAll(), HttpStatus.OK);
 
 	}
 
 	@RequestMapping(value = "/country", method = RequestMethod.GET)
 	public ResponseEntity<?> getcountryByID(@RequestParam int country_id) {
 
-		return new ResponseEntity<>(countryService.getById(country_id),HttpStatus.OK);
+		return new ResponseEntity<>(countryService.getById(country_id), HttpStatus.OK);
 
 	}
 
